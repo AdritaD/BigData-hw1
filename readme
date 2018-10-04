@@ -1,0 +1,135 @@
+<--------------------Folder contents-------------------->
+1)hw1(Questions)
+
+INPUT FOLDER:
+2)input files(2)
+
+3)Hw1-Documentation-answers specific questions asked
+
+Q1 FOLDER:
+4)Q1-java code-MutualFriends.java
+5)Q1-output
+6)Q1-jar file-MutualFriends.jar
+
+Q2-FOLDER:
+7)Q2-java code-TopTenCommon.java
+8)Q2-output
+9)Q2-jar file-TopTenCommon.jar
+
+Q3-FOLDER:
+10)Q3-java code-FriendState.java
+11)Q3-output
+12)Q3-jar file-FriendState.jar
+
+Q4-FOLDER:
+13)Q4-java code-
+14)Q4-output
+15)Q4-jar file-
+
+16)readme file
+
+
+
+<--------------------Instructions to run code-------------->
+#All commands given here are examples... you must use your own file path in hdfs and your own local file directories
+
+Q1)
+-put jar and input files to sftp:
+put  <your/local/path/MutualFriends.jar>
+
+put  <your/local/path/userdata.txt>
+
+put  <your/local/path/soc-LiveJournal1Adj.txt>
+
+
+
+-put text files to hdfs:
+hdfs dfs -put userdata.txt <hdfs/input/path>
+hdfs dfs -put soc-LiveJournal1Adj.txt  <hdfs/input/path>
+
+-run command: hadoop jar MutualFriends.jar MutualFriends <soc-LiveJournal1Adj.txt-input-path> <output-path> 
+
+
+-hdfs dfs -get <output-path>
+
+-cd <output>
+
+-cat part-r-00000
+
+
+
+Q2)
+-put jar and input files to sftp:
+put  <your/local/path/TopTenCommon.jar>
+
+put  <your/local/path/userdata.txt>
+
+put  <your/local/path/soc-LiveJournal1Adj.txt>
+
+
+
+-put text files to hdfs:
+hdfs dfs -put userdata.txt <hdfs/input/path>
+hdfs dfs -put soc-LiveJournal1Adj.txt  <hdfs/input/path>
+
+-run command: hadoop jar TopTenCommon.jar TopTenCommon <soc-LiveJournal1Adj.txt-input-path> <output-path-1> <output-path2>
+
+
+-hdfs dfs -get <output-path2>
+
+-cd <output2>
+
+-cat part-r-00000
+
+
+
+Q3)
+-put jar and input files to sftp:
+put  <your/local/path/FriendState.jar>
+
+put  <your/local/path/userdata.txt>
+
+put  <your/local/path/soc-LiveJournal1Adj.txt>
+
+
+
+-put text files to hdfs:
+hdfs dfs -put userdata.txt <hdfs/input/path>
+hdfs dfs -put soc-LiveJournal1Adj.txt  <hdfs/input/path>
+
+-run command: hadoop jar FriendState.jar FriendState <user1-id> <user2-id> <soc-LiveJournal1Adj.txt-input-path> <output-path-1> <userdata.txt-input-path> <output-path2>
+
+
+-hdfs dfs -get <op-path2>
+
+-cd <output2>
+
+-cat part-r-00000
+
+
+Q4)
+-put jar and input files to sftp:
+put  <your/local/path/Chain.jar>
+
+put  <your/local/path/userdata.txt>
+
+put  <your/local/path/soc-LiveJournal1Adj.txt>
+
+
+
+-put text files to hdfs:
+hdfs dfs -put userdata.txt <hdfs/input/path>
+hdfs dfs -put soc-LiveJournal1Adj.txt  <hdfs/input/path>
+
+-run command:hadoop jar Chain.jar Chain <userdata.txt-input-path> <soc-LiveJournal1Adj.txt-input-path> <userdata.txt-input-path> <output-path-1> <output-path-2>
+
+
+
+-hdfs dfs -get <output-path2>
+
+-cd <output2>
+
+-cat part-r-00000
+
+
+
